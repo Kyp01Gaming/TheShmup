@@ -62,6 +62,7 @@ public class Enemy : MonoBehaviour {
             col.gameObject.SendMessage("Hurt");
             Destroy(gameObject);
         }
+        // Destroys itself if colliding with something that isn't tagged Enemy
         else if (col.gameObject.tag != "Enemy")
             Destroy(gameObject);
     }

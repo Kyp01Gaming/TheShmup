@@ -32,7 +32,8 @@ public class Bullet : MonoBehaviour {
         // Checks for an object with either a player tag or an enemy tag while this isn't tagged enemy
         if (col.gameObject.tag == "Player" || (gameObject.tag != "Enemy" && col.gameObject.tag == "Enemy"))
             col.gameObject.SendMessage("Hurt");
-        if (!(gameObject.tag == "Enemy" && col.gameObject.tag == "Enemy"))
+        // Destroy itself if it isn't and the colliding object isn't tagged Enemy
+        if (gameObject.tag != "Enemy" && col.gameObject.tag != "Enemy")
             Destroy(gameObject);
     }
 }

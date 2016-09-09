@@ -1,7 +1,9 @@
 ﻿/*
+ * 
  * NOTE:
  *      This script is still a work in progress, however
  *      the IncreaseScore function is needed for the Enemy script.
+ *      
  */
 
 using UnityEngine;
